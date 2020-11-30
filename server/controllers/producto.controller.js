@@ -31,7 +31,7 @@ var productoController = {
 
             if (!producto) return res.status(404).send({message: "Producto no existente"});
 
-            return res.status(200).res({
+            return res.status(200).send({
                 producto
             })
         });
@@ -70,7 +70,7 @@ var productoController = {
         Producto.findByIdAndRemove(productoId, (err, productoRemoved) => {
             if (err) return res.status(500).send({message: "Error al obtener"});
 
-            if (!cursoRemoved) return res.status(404).send({message: "Producto no existente"});
+            if (!productoRemoved) return res.status(404).send({message: "Producto no existente"});
 
             return res.status(200).send({
                 producto: productoRemoved

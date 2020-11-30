@@ -30,7 +30,9 @@ router.post('/productos', ProductoController.createProducto);
 // Actualizar un producto
 router.put('/productos', ProductoController.updateProducto);
 // Obtener por nombre de PRODUCTO
-router.get('/productos/:nombre', ProductoController.findProductoByName);
+//router.get('/productos/:nombre', ProductoController.findProductoByName);
+// Eliminar producto por su id
+router.delete('/productos/:id', ProductoController.deleteProducto);
 
 // ROUTES VENTAS
 // Obtener venta por folio
@@ -41,3 +43,5 @@ router.get('/ventas', VentaController.getAllVentas);
 router.post('/ventas', VentaController.createVenta);
 // Actualizar una venta
 router.put('/ventas', VentaController.updateVenta);
+
+module.exports = router;

@@ -1,4 +1,4 @@
-var Cliente = require('../models/Cliente');
+let Cliente = require('../models/Cliente');
 
 var clienteController = {
 
@@ -41,12 +41,12 @@ var clienteController = {
 
     // Obtener todos los CLIENTES
     getAllClientes: function(req, res) {
-        Cliente.find({}).exec((err, clientes) => {
+        Cliente.find().exec((err, clientes) => {
             if (err) return res.status(500).send({message: "Error al obtener"});
 
             if (!clientes) return res.status(404).send({message: "No hay clientes que mostrar"});
 
-            return res.status(200).send({ cliente });
+            return res.status(200).send({ clientes });
         });
     },
 
