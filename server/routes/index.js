@@ -28,7 +28,7 @@ router.get('/productos', ProductoController.getAllProductos);
 // Crear producto
 router.post('/productos', ProductoController.createProducto);
 // Actualizar un producto
-router.put('/productos', ProductoController.updateProducto);
+router.put('/productos/:id', ProductoController.updateProducto);
 // Obtener por nombre de PRODUCTO
 //router.get('/productos/:nombre', ProductoController.findProductoByName);
 // Eliminar producto por su id
