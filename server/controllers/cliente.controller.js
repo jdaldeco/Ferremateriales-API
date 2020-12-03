@@ -51,7 +51,7 @@ var clienteController = {
     },
 
     // Actualizar un CLIENTE
-    updateCliente: function() {
+    updateCliente: function(req, res) {
         var clienteId = req.params.id;
         var update = req.body;
 
