@@ -17,7 +17,7 @@ router.put('/clientes/:id', ClienteController.updateCliente);
 // Eliminar un cliente
 router.delete('/clientes/:id', ClienteController.deleteCliente);
 // Obtener cliente por nombre
-router.get('/clientes/:nombre', ClienteController.findClienteByName);
+router.get('/clientes/name/:nombre', ClienteController.findClienteByName);
 
 
 // ROUTES PRODUCTO
@@ -30,7 +30,7 @@ router.post('/productos', ProductoController.createProducto);
 // Actualizar un producto
 router.put('/productos/:id', ProductoController.updateProducto);
 // Obtener por nombre de PRODUCTO
-//router.get('/productos/:nombre', ProductoController.findProductoByName);
+router.get('/productos/code/:code', ProductoController.findProductoByName);
 // Eliminar producto por su id
 router.delete('/productos/:id', ProductoController.deleteProducto);
 
@@ -43,5 +43,7 @@ router.get('/ventas', VentaController.getAllVentas);
 router.post('/ventas', VentaController.createVenta);
 // Actualizar una venta
 router.put('/ventas', VentaController.updateVenta);
+// Elimina una venta
+router.delete('/ventas/:id', VentaController.deleteVenta);
 
 module.exports = router;

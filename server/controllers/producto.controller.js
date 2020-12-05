@@ -80,9 +80,9 @@ var productoController = {
 
     // Buscar por nombre de PRODUCTO
     findProductoByName: function(req, res) {
-        var nombre = req.paras.nombre;
+        var code = req.params.code;
 
-        Producto.find({nombre: nombre}).exec((err, productos) => {
+        Producto.find({nombre: code}).exec((err, productos) => {
             if (err) return res.status(500).send({message: "Error al obtener"});
 
             if (!productos) return res.status(404).send({messgae: "No hay productos que mostrar"});

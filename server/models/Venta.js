@@ -6,11 +6,8 @@ var ventaSchema = new Schema({
         type: String,
         default: ""
     },
-    productos: [{
-        type: String,
-        default: ""
-    }],
-    cilente: {
+    productos: [],
+    cliente: {
         type: String, 
         default: ""
     },

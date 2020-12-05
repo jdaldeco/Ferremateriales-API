@@ -4,12 +4,12 @@ var ventaController = {
 
     // Create VENTA
     createVenta: function(req, res) {
-        var venta = new venta();
+        var venta = new Venta();
         var params = req.body;
 
         venta.folio = params.folio;
         venta.cliente = params.cliente;
-        venta.producto = params.producto;
+        venta.productos = params.productos;
         venta.importe = params.importe;
         venta.fecha = params.fecha;
 
